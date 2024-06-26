@@ -24,7 +24,7 @@ jobs:
           echo "$CONFIG" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - run: echo "$CONFIG" >> config
-      - run: ./cbsh --config-dir .
+      - run: ./cbsh --config-dir . -c cb-env
         shell: bash
         env:
           COUCHBASE_CONNECTION_STRING: ${{ secrets.COUCHBASE_CONNECTION_STRING }}
