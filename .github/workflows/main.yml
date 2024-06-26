@@ -23,7 +23,7 @@ jobs:
           echo "CONFIG<<EOF" >> $GITHUB_ENV
           echo "$CONFIG" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-      - run: cat $CONFIG >> config
+      - run: echo "$CONFIG" >> config
       - run: ./cbsh --config-dir .
         shell: bash
         env:
